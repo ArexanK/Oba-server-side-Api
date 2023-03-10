@@ -1,18 +1,16 @@
 <%- include('./partials/head.ejs') %>
 
 <section>
-  <h2>Persoonlijke Boekentips</h2>
+  <h2>Waar ben je op zoek?</h2>
   Zin om een nieuw boek te lezen of mee te doen aan een nieuw activiteit?
-  <br />Hier zijn een paar suggesties die speciaal voor jou zijn uitgezocht.
+  <br />Hier vindt je een aantal suggesties!
 </section>
 <br />
 <br />
-<h1>aanbevolen activiteiten</h1>
+<h2>boeken & luister boeken</h2>
 
 </body>
 </html>
-
-
 
   <section class="boekenOverzicht">
  
@@ -20,10 +18,17 @@
      
      <article class="boek">
      <img src="<%= result.coverimages %>" alt="boek">
-     <h2> <%= result.titles[0] %></h2>
+     <h3> <%= result.titles[0] %></h3>
      </article>
      
      <% }) %>
     </section>
+
+    <h2>cursussen & activiteiten </h2>
+
+
+
+
+
 
 <%- include('./partials/foot.ejs') %>
