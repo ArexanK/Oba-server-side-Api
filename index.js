@@ -12,32 +12,22 @@ app.use(express.static('public'))
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
-    let semesterUrl = url + '/semesters'
+    const BoekenURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
 
-    fetchJson(semesterUrl).then((data) => {
+    fetchJson(BoekenURL).then((data) => {
         response.render('index', data)
+        console.log(data)
     })
+
 })
 
-app.get('/sprint', (request, response) => {
-    let slug = request.query.sprintSlug || 'your-tribe'
-    let sprintUrl = url + '/sprint/' + slug
-    fetchJson(sprintUrl).then((data) => {
-        // console.log(data)
-        response.render('sprint', data)
-    })
+app.get('/detail', (request, response) => {
+    response.render('detail')
 })
 
-app.get('/over', (request, response) => {
-    response.render('over')
-})
-
-app.get('/contact', (request, response) => {
-    response.render('contact')
-})
 
 // Stel het poortnummer in en start express
-app.set('port', process.env.PORT || 5000)
+app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })
