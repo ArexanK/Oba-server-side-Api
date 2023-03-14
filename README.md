@@ -1,5 +1,7 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-![051E5054-ED69-4A4C-A3A9-BF784A175C79](https://user-images.githubusercontent.com/94745953/225113595-9b3ab3d4-5b03-4b45-8dcb-1077ea7bead5.jpeg)
+
+![8DB40AA6-F0AD-4740-8F88-F03077648D39](https://user-images.githubusercontent.com/94745953/225115348-04fb077c-00cb-4cd6-a8bc-4c70ebdbfa62.jpeg)
+
 
 
 ![B161382D-CAA2-4E96-BA54-501BD1941145](https://user-images.githubusercontent.com/94745953/225112366-f0792bd9-691b-4346-b039-aea785d36d48.jpeg)
