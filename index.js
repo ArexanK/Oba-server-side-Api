@@ -1,7 +1,9 @@
 import express from 'express'
 
 const url = 'https://zoeken.oba.nl/api/v1'
-
+const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=16c19e6083308c984c452600134989ba&output=json'
+const bookURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
+const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=16c19e6083308c984c452600134989ba&output=json'
 // Maak een nieuwe express app
 const app = express()
 
@@ -10,30 +12,23 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))
 
-
-
-
 // Maak een route voor de index
-const BoekenURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
 app.get('/', (request, response) => {
-
-
-    fetchJson(BoekenURL).then((data) => {
+    fetchJson(bookURL).then((data) => {
         response.render('index', data)
-        console.log(data)
-    })
 
+    })
 })
 
+//BOEKEN
 app.get('/search', (request, response) => {
-    fetchJson(BoekenURL).then((data) => {
+    fetchJson(bookURL).then((data) => {
         let dataClone = structuredClone(data);
 
-        // 1) als request.query.name bestaat
+
         if (request.query.titles) {
-            // 2) Filter dan uit de data alle mensen die niet dat deel in hun naam hebben
+
             dataClone.results.titles = dataClone.results.titles.filter(function (title) {
-                // 3 zoekfunctie  op naam+ achternaam. (hoofdlettergevoelig in script.js geplaatst)
                 return results.titles.includes(request.query.titles)
             })
         }
@@ -42,9 +37,53 @@ app.get('/search', (request, response) => {
     });
 });
 
+//ACTIVITEITEN
+app.get('/search', (request, response) => {
+    fetchJson(activityURL).then((data) => {
+        let dataClone = structuredClone(data);
+
+
+        if (request.query.titles) {
+
+            dataClone.results.titles = dataClone.results.titles.filter(function (title) {
+
+                return results.titles.includes(request.query.titles)
+            })
+        }
+
+        response.render('index', dataClone)
+    });
+});
+
+// DETAIL
 app.get('/detail', (request, response) => {
     response.render('detail')
 })
+
+//COURSE
+app.get('/search', (request, response) => {
+    fetchJson(courseURL).then((data) => {
+        let dataClone = structuredClone(data);
+
+
+        if (request.query.titles) {
+
+            dataClone.results.titles = dataClone.results.titles.filter(function (title) {
+
+                return results.titles.includes(request.query.titles)
+            })
+        }
+
+        response.render('index', dataClone)
+    });
+});
+
+
+
+
+
+
+
 
 
 // Stel het poortnummer in en start express
