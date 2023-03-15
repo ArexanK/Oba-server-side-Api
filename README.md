@@ -49,6 +49,7 @@ Express is een webframework voor Node.js dat wordt gebruikt voor het bouwen van 
 
 ## 🖥 Gebruik
 - Oba API
+- Json file: boeken, cursussen en activiteiten
 
 ## 📚 Bronnen
 - MDN docs
