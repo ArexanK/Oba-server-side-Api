@@ -33,6 +33,7 @@ link: https://pear-crown.cyclic.app/
 
 ## 🖇 Kenmerken
 
+- Rest Api
 - Node.js
 - Javascript
 - HTML & CSS
@@ -40,7 +41,7 @@ link: https://pear-crown.cyclic.app/
 - Cyclic
 
 ## ⬇️ Installatie
-- NPM install
+- NPM install... node express
 
 ## 🖥 Gebruik
 - Oba API
