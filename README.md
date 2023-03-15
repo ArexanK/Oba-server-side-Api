@@ -11,32 +11,42 @@
 
 
 
-# Oba
-Userstory: Als oba lid wil ik de zoekresultaten kunnen filteren of sorteren, zodat ik gericht kan zoeken naar interessante boeken, cursussen en activiteiten.
+# <img width="408" alt="logo-oba" src="https://user-images.githubusercontent.com/94745953/225242980-92f7cab6-c465-4705-b821-de7962871d18.png">
+
+
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+  * 📝 [Beschrijving van opdracht](#beschrijving)
+  * 🖇 [Kenmerken](#kenmerken)
+  * ⬇️ [Installatie](#installatie)
+  * 🖥 [Gebruik](#gebruik)
+  * 📚 [Bronnen](#bronnen)
+  * 👾 [Licentie](#licentie)
 
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+## 📝 Beschrijving
+Userstory: Als oba lid wil ik de zoekresultaten kunnen filteren of sorteren, zodat ik gericht kan zoeken naar interessante boeken, cursussen en activiteiten.
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Voor deze opdracht heb ik voor Oba een nieuw website gemaakt waar oba leden zoekresultaten kunnen filteren en sorteren. Ik heb gebruik gemaakt van oba api om boeken, activiteiten en cursussen te plaatsen op de website. Ik heb vervolgens een overzichts pagina gemaakt en daar detail pagina's aan gelinked, een werkende zoekvar met zoekfunctie en een filter functie. 
+## 🖇 Kenmerken
 
-## Installatie
+- Node.js
+- Javascript
+- HTML & CSS
+- VScode
+- Cyclic
 
-## Gebruik
+## ⬇️ Installatie
+- NPM install
 
-## Bronnen
+## 🖥 Gebruik
+- Oba API
 
-## Licentie
+## 📚 Bronnen
+- MDN docs
+- Youtube
+- google
+
+## 👾 Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
