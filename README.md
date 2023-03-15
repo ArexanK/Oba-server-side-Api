@@ -28,6 +28,9 @@
 Userstory: Als oba lid wil ik de zoekresultaten kunnen filteren of sorteren, zodat ik gericht kan zoeken naar interessante boeken, cursussen en activiteiten.
 
 Voor deze opdracht heb ik voor Oba een nieuw website gemaakt waar oba leden zoekresultaten kunnen filteren en sorteren. Ik heb gebruik gemaakt van oba api om boeken, activiteiten en cursussen te plaatsen op de website. Ik heb vervolgens een overzichts pagina gemaakt en daar detail pagina's aan gelinked, een werkende zoekvar met zoekfunctie en een filter functie. 
+
+link: https://pear-crown.cyclic.app/
+
 ## 🖇 Kenmerken
 
 - Node.js
