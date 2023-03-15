@@ -41,7 +41,7 @@ link: https://pear-crown.cyclic.app/
 - Cyclic
 
 ## ⬇️ Installatie
-- NPM install... node express
+- NPM install... node express ejs
 
 ## 🖥 Gebruik
 - Oba API
