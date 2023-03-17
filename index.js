@@ -1,9 +1,14 @@
 import express from 'express'
+import * as dotenv from 'dotenv'
 
 const url = 'https://zoeken.oba.nl/api/v1'
-const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=16c19e6083308c984c452600134989ba&output=json'
-const bookURL = url + '/search/?q=boek&authorization=1e19898c87464e239192c8bfe422f280&refine=true&output=json'
-const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=16c19e6083308c984c452600134989ba&output=json'
+
+// activate dotenv
+dotenv.config()
+
+const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=' + process.env.authorization + '&output=json'
+const bookURL = url + '/search/?q=boek&authorization=' + process.env.authorizationB + '&refine=true&output=json'
+const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=' + process.env.authorization + '&output=json'
 // Maak een nieuwe express app
 const app = express()
 
@@ -16,37 +21,31 @@ app.use(express.static('public'))
 app.get('/', (request, response) => {
     fetchJson(bookURL).then((data) => {
         response.render('index', data)
-
     })
 })
 
 //BOEKEN
-app.get('/search', (request, response) => {
+app.get('/boeken', (request, response) => {
     fetchJson(bookURL).then((data) => {
         let dataClone = structuredClone(data);
 
-
         if (request.query.titles) {
-
             dataClone.results.titles = dataClone.results.titles.filter(function (title) {
                 return results.titles.includes(request.query.titles)
             })
         }
-
+        console.log("hier staat de log van dataclone", dataClone)
         response.render('index', dataClone)
     });
 });
 
 //ACTIVITEITEN
-app.get('/search', (request, response) => {
+app.get('/activiteiten', (request, response) => {
     fetchJson(activityURL).then((data) => {
         let dataClone = structuredClone(data);
 
-
         if (request.query.titles) {
-
             dataClone.results.titles = dataClone.results.titles.filter(function (title) {
-
                 return results.titles.includes(request.query.titles)
             })
         }
@@ -61,10 +60,9 @@ app.get('/detail', (request, response) => {
 })
 
 //COURSE
-app.get('/search', (request, response) => {
+app.get('/cursussen', (request, response) => {
     fetchJson(courseURL).then((data) => {
         let dataClone = structuredClone(data);
-
 
         if (request.query.titles) {
 
@@ -87,7 +85,7 @@ app.get('/search', (request, response) => {
 
 
 // Stel het poortnummer in en start express
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 4000)
 app.listen(app.get('port'), function () {
     console.log(`Application started on http://localhost:${app.get('port')}`)
 })

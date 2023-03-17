@@ -110,7 +110,7 @@ body {
 }
 
 h3 {
-    text-decoration: none;
+
     color: rgb(148, 148, 148);
     font-family: avenir_lt_std95_black;
     font-weight: bold;
@@ -267,15 +267,16 @@ a {
 
 /*aanbevolen activiteiten section*/
 
-h1 {
+section>h1 {
     text-decoration: none;
     color: black;
     font-family: avenir_lt_std95_black;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     text-align: center;
 }
 
+/* 
 section>h2 {
     text-decoration: none;
     color: rgb(223, 22, 22);
@@ -284,7 +285,19 @@ section>h2 {
     font-size: 2rem;
 
     text-align: center;
+} */
+
+section>h3 {
+    text-decoration: none;
+    color: rgb(135, 135, 135);
+    font-family: avenir_lt_std95_black;
+    font-weight: bold;
+    font-size: 2rem;
+
+    text-align: center;
 }
+
+
 
 section {
     text-decoration: none;
