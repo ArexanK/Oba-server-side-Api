@@ -6,11 +6,14 @@ const url = 'https://zoeken.oba.nl/api/v1'
 // activate dotenv
 dotenv.config()
 
+
 const activityURL = url + '/search/?q=special:all%20table:activiteiten&authorization=' + process.env.authorization + '&output=json'
 const bookURL = url + '/search/?q=boek&authorization=' + process.env.authorizationB + '&refine=true&output=json'
 const courseURL = url + '/search/?q=special:all%20table:jsonsrc&authorization=' + process.env.authorization + '&output=json'
 // Maak een nieuwe express app
 const app = express()
+
+console.log(process.env.authorizationB)
 
 // Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
