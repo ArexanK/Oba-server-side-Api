@@ -37,6 +37,7 @@ link: https://pear-crown.cyclic.app/
 - Node.js
 - Javascript
 - HTML & CSS
+- dotenv( bescherming Api key)
 - VScode
 - Cyclic
 
